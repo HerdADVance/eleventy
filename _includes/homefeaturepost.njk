@@ -1,0 +1,10 @@
+
+<p>Home Feature Post</p>
+
+{% set postslist = collections.posts | head(-1) %}
+
+{% for post in postslist | reverse %}
+	<article class="home-feature-article">
+		<h1>{{ post.data.title }}
+	</article>
+{% endfor %}
