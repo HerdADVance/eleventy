@@ -1,0 +1,135 @@
+@import "variables.sass"
+
+*
+	box-sizing: border-box
+	font-weight: 500
+	margin: 0
+	padding: 0
+
+*:focus
+	outline: none
+
+html
+	display: flex
+
+body
+	background: $bodyBackground
+	display: flex
+	flex-direction: column
+	font-family: $bodyText
+	font-size: 16px
+	min-height: 100vh
+	width: 100%
+
+main
+	flex-grow: 1
+
+.header, .footer
+	flex-shrink: 0
+
+header, section, main, footer, .row, .clear
+	clear: both
+
+header:after, section:after, main:after, footer:after, .row:after, .clear:after
+	clear: both
+	content: ''
+	display: table
+
+h1, h2, h3, h4, h5, h6, p, ul, li
+	margin: 0
+
+img
+	max-width: 100%
+	vertical-align: bottom
+
+a
+	text-decoration: none
+
+a:hover
+	text-decoration: underline
+
+.hide, .mob
+	display: none !important
+
+.row
+	display: flex
+.col-1
+	width: 8.3333%
+.col-2
+	width: 16.6666%
+.col-3
+	width: 25%
+.col-4
+	width: 33.3333%
+.col-5
+	width: 41.6666%
+.col-6
+	width: 50%
+.col-7
+	width: 58.3333%
+.col-8
+	width: 66.6666%
+.col-9
+	width: 75%
+.col-10
+	width: 83.3333%
+.col-11
+	width: 91.6666%
+.col-12
+	width: 100%
+
+[class*="col-"] 
+	float: left
+
+[class*="col-"]:last-child 
+	margin-right: 0
+
+.row [class*="col-"] 
+	margin-left: $columnPadding
+	margin-right: $columnPadding
+
+.row [class*="col-"]:first-child
+	margin-left: 0
+	margin-right: $columnPadding * 2
+
+.row [class*="col-"]:last-child
+	margin-left: $columnPadding * 2
+	margin-right: 0
+
+.pri
+	background: $primary
+.sec
+	background: $secondary
+.wrap
+	padding-left: $wrap
+	padding-right: $wrap
+
+.rel
+	position: relative
+.abs
+	position: absolute
+.left
+	text-align: left
+.center
+	text-align: center
+.right
+	text-align: right
+.full
+	width: 100%
+.tall
+	height: 100%
+.no-pad-y
+	padding-bottom: 0
+	padding-top: 0
+.flex
+	align-items: center
+	display: flex
+	justify-content: space-between
+
+.flex-spread
+	flex-grow: 1
+
+.flex-right
+	display: flex
+	justify-content: flex-end
+

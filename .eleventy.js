@@ -13,7 +13,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(pluginSass, {
-    watch: ['**/*.{scss,sass}', '!node_modules/**']
+    watch: ['**/style.{scss,sass}', '!node_modules/**']
   });
 
   eleventyConfig.setDataDeepMerge(true);

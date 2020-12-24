@@ -1,0 +1,49 @@
+@import "../css/normalize"
+@import "variables.sass"
+@import "base.sass"
+@import "elements.sass"
+
+.header
+	background: linear-gradient(to left top, rgba($secondary, 0.96) 20%, rgba($primary, 0.96) 100%)
+	bottom: 0
+	height: 10vh
+	justify-content: space-between
+	position: absolute
+
+.header.sticky
+  position: fixed
+  top: 0
+
+.header h1
+	margin-bottom: 0
+
+.header h1 a
+	color: white
+	font-weight: 700
+
+.nav ul
+	float: right
+
+.nav li
+	margin-left: 1.25em
+
+.nav li:first-child	
+	margin-left: 0
+
+.nav li a
+	color: white
+
+.home-feature-article
+	height: 90vh
+
+
+
+.footer
+	border-top: 3px solid $secondary
+	padding-bottom: 30px
+	padding-top: 30px
+
+.footer p
+	color: white
+
+@import "queries.sass"

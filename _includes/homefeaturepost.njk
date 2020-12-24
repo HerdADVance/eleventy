@@ -1,10 +1,19 @@
 
-<p>Home Feature Post</p>
-
 {% set postslist = collections.posts | head(-1) %}
 
 {% for post in postslist | reverse %}
-	<article class="home-feature-article">
-		<h1>{{ post.data.title }}
+	<article class="home-feature-article wrap flex">
+		<div class="row">
+			<div class="col-7">
+				<img src="/img/vikes-panthers.jpg" alt="">
+			</div>
+			<div class="col-5 home-feature-info flex">
+				<div>
+					<h1 class="no-mar">Here's a Pretty Fucking Awesome Golf Course in Golden, Colorado</h1>
+					<p>This par 5 was dominated by an epic 3rd shot that landed like 5 feet from the hole and of course I made the motherfucking birdie putt.</p>
+					<p>Canyon Trace in Golden, Colorado, also home to Coors Brewing Company, is the setting for this beautiful course that's nestled just to east of where the Rocky Mountains really start to become rocky.</p>
+				</div>
+			</div>
+		</div>
 	</article>
 {% endfor %}
